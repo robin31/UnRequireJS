@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="dev" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+            <label>dev</label>
+            <tab>advanced</tab>
+            <resource>Robin31_UnRequireJS::config_robin31_unrequirejs</resource>
+            <group id="js" showInDefault="1" showInStore="1" showInWebsite="1" translate="label">
+                <label>js</label>
+                <field id="unload_unused_requirejs" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="500"
+                       translate="label" type="select">
+                    <label>Enable unloading of unused requirejs-config files</label>
+                    <comment/>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
