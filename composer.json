@@ -1,0 +1,27 @@
+{
+    "name": "robin31/unrequirejs",
+    "description": "Unloading RequireJS configuration for Magento 2 modules that are not in use.",
+    "keywords": ["magento 2",  "requirejs"],
+    "require": {
+        "magento/magento-composer-installer": "*",
+        "php": ">=7"
+    },
+    "type": "magento2-module",
+    "license": "MIT",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Robin31\\UnRequireJS\\": ""
+        }
+    },
+    "extra": {
+        "map": [
+            [
+                "*",
+                "Robin31/UnRequireJS"
+            ]
+        ]
+    }
+}
