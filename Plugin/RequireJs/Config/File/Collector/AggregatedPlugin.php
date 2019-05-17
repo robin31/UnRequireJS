@@ -27,13 +27,19 @@ class AggregatedPlugin
     protected $scopeConfig;
 
     /**
+     */
+    protected $unloaderList;
+
+    /**
      * AggregatedPlugin constructor.
      *
      * @param \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
+     * @param array                                              $unloaderList
      */
-    public function __construct(ScopeConfigInterface $scopeConfig)
+    public function __construct(ScopeConfigInterface $scopeConfig, array $unloaderList)
     {
         $this->scopeConfig = $scopeConfig;
+        $this->unloaderList = $unloaderList;
     }
 
     /**
@@ -48,13 +54,30 @@ class AggregatedPlugin
      */
     public function aroundGetFiles(Aggregated $subject, callable $proceed, ThemeInterface $theme, $filePath)
     {
-        $result = $proceed($theme, $filePath);
+        $results = $proceed($theme, $filePath);
 
         if ($filePath === Config::CONFIG_FILE_NAME && $this->isModuleEnabled()) {
-            // @TODO: implement logic
+            foreach ($results as $key => $requireJSConfigFile) {
+                /** @var \Magento\Framework\View\File $requireJSConfigFile */
+
+                $unloaders = array_filter(
+                    $this->unloaderList,
+                    function ($o) use ($requireJSConfigFile) {
+                        /** @var \Robin31\UnRequireJS\Model\AbstractUnloader $o */
+                        return $o->getModuleName() === $requireJSConfigFile->getModule();
+                    }
+                );
+
+                foreach ($unloaders as $unloader) {
+                    if ($unloader->isModuleInUse() === false) {
+                        unset($results[$key]);
+                        break;
+                    }
+                }
+            }
         }
 
-        return $result;
+        return $results;
     }
 
     /**
