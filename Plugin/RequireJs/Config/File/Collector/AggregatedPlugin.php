@@ -83,10 +83,10 @@ class AggregatedPlugin
     /**
      * Check if this module is enabled
      *
-     * @return mixed
+     * @return bool
      */
     protected function isModuleEnabled()
     {
-        return $this->scopeConfig->getValue(self::XML_PATH_MODULE_ENABLED, ScopeInterface::SCOPE_STORE);
+        return (bool) $this->scopeConfig->getValue(self::XML_PATH_MODULE_ENABLED, ScopeInterface::SCOPE_STORE);
     }
 }
