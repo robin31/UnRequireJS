@@ -12,6 +12,16 @@ requirejs-config files if the parent modules are not enabled/configured. Example
 Keep in mind: the official way of making sure that requirejs-config files are not loaded are by properly disabling
 the module in the Magento way. This is by disabling the module in `app/etc/config.php`.
 
+### Talk number to me
+For all tests Magento 2.3.1 Luma with sample data has been used as this was the latest version at the creation of this module.
+
+**Homepage**  
+default: 179 javascript file loads.  
+Optimizer: 163 javascript file loads.
+
+Proper JS bundling with either Magento or the RequireJS optimizer will reduce the total number of file loads
+but it would still contain these files and run their init functions etc.
+
 
 ### Use in production mode
 This module can be used in production mode **BUT** after configuring a module (for instance, enabling paypal) the 
@@ -24,13 +34,16 @@ static content MUST be regenerated because the static content will not hold the 
 
 ### Module list
 ##### MSP_ReCaptcha
-Config setting of `msp_securitysuite_recaptcha/frontend/enabled` is checked. 
+Config setting of `msp_securitysuite_recaptcha/frontend/enabled` is checked.  
+_Saving 3 js file loads_
 ##### Amazon_Payment
 Config settings of `payment/amazon_payment/active` and `payment/amazon_payment/lwa_enabled` are checked.
-If both are disabled the requirejs-config will be unloaded.
+If both are disabled the requirejs-config will be unloaded.  
+_Not saving any file loads, just saving some kb's in requirejs-config file_
 ##### Amazon_Login
 Config settings of `payment/amazon_payment/amazon_login_in_popup` and `payment/amazon_payment/lwa_enabled` are checked.
 If both are disabled the requirejs-config will be unloaded.
+_Saving 10 js file loads_
 #### Vertex_Tax
 Config setting of `tax/vertex_settings/enable_vertex` is checked.
 This module o  nly added requirejs-config mapping and adding x-magento-init config. If the module itself is not enabled it
