@@ -6,6 +6,7 @@
             <argument name="unloaderList" xsi:type="array">
                 <item name="MSP_ReCaptcha_unloader" xsi:type="object">Robin31\UnRequireJS\Model\MSP\ReCaptchaUnloader</item>
                 <item name="Amazon_Payment_unloader" xsi:type="object">Robin31\UnRequireJS\Model\Amazon\PaymentUnloader</item>
+                <item name="Amazon_Login_unloader" xsi:type="object">Robin31\UnRequireJS\Model\Amazon\LoginUnloader</item>
             </argument>
         </arguments>
     </type>
