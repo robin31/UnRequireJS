@@ -9,4 +9,11 @@
         <plugin sortOrder="1000" name="robin31UnRequireJSAuthenticationPopup"
                 type="Robin31\UnRequireJS\Plugin\Block\Account\AuthenticationPopupPlugin"/>
     </type>
+    <type name="Magento\Checkout\Block\Cart\Totals">
+        <plugin sortOrder="1" name="robin31UnRequireJSTotals"
+                type="Robin31\UnRequireJS\Plugin\Block\Cart\TotalsPlugin"/>
+    </type>
+    <type name="Magento\Checkout\Block\Onepage">
+        <plugin sortOrder="1" name="robin31UnRequireJSOnepage" type="Robin31\UnRequireJS\Plugin\Block\OnepagePlugin"/>
+    </type>
 </config>

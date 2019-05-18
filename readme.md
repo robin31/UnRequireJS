@@ -31,6 +31,12 @@ If both are disabled the requirejs-config will be unloaded.
 ##### Amazon_Login
 Config settings of `payment/amazon_payment/amazon_login_in_popup` and `payment/amazon_payment/lwa_enabled` are checked.
 If both are disabled the requirejs-config will be unloaded.
+#### Vertex_Tax
+Config setting of `tax/vertex_settings/enable_vertex` is checked.
+This module o  nly added requirejs-config mapping and adding x-magento-init config. If the module itself is not enabled it
+will not load any extra javascript. Both the requirejs-config and the x-magento-init code is unloaded.  
+_Not saving any file loads, just cleaning up_
+
 
 ### Modules todo
 - magento captcha (this can be disabled i believe?)

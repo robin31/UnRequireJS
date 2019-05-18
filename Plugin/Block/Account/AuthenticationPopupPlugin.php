@@ -40,7 +40,7 @@ class AuthenticationPopupPlugin
     }
 
     /**
-     * Plugin to remove unneed x-magento-init configuration if MSP or Amazon Login is not in use.
+     * Plugin to remove unnecessary x-magento-init configuration if MSP or Amazon Login is not in use.
      * If this configuration is kept and the requirejs-config is unloaded this will give JS errors.
      *
      * @param \Magento\Customer\Block\Account\AuthenticationPopup $subject
