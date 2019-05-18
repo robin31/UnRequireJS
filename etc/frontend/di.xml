@@ -5,4 +5,8 @@
         <plugin sortOrder="1" name="robin31UnRequireJSAggregated"
                 type="Robin31\UnRequireJS\Plugin\RequireJs\Config\File\Collector\AggregatedPlugin"/>
     </type>
+    <type name="Magento\Customer\Block\Account\AuthenticationPopup">
+        <plugin sortOrder="1000" name="robin31UnRequireJSAuthenticationPopup"
+                type="Robin31\UnRequireJS\Plugin\Block\Account\AuthenticationPopupPlugin"/>
+    </type>
 </config>
