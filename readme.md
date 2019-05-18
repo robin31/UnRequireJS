@@ -51,9 +51,13 @@ If both are disabled the requirejs-config will be unloaded.
 _Saving 10 js file loads_
 #### Vertex_Tax
 Config setting of `tax/vertex_settings/enable_vertex` is checked.
-This module o  nly added requirejs-config mapping and adding x-magento-init config. If the module itself is not enabled it
+This module only added requirejs-config mapping and adding x-magento-init config. If the module itself is not enabled it
 will not load any extra javascript. Both the requirejs-config and the x-magento-init code is unloaded.  
 _Not saving any file loads, just cleaning up_
+#### Klarna_Kp
+Config setting of `payment/klarna_kp/active` is checked. requirejs-config is unloaded and klarna
+ checkout config is removed. This checkout config is depending on the requirejs-config.
+ _Saving 2 js file loads at checkout_
 
 
 ### Modules todo
