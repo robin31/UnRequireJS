@@ -16,4 +16,8 @@
     <type name="Magento\Checkout\Block\Onepage">
         <plugin sortOrder="1" name="robin31UnRequireJSOnepage" type="Robin31\UnRequireJS\Plugin\Block\OnepagePlugin"/>
     </type>
+    <type name="Klarna\Kp\Model\KpConfigProvider">
+        <plugin sortOrder="1" name="robin31UnRequireJSKpConfigProvider"
+                type="Robin31\UnRequireJS\Plugin\Model\KpConfigProviderPlugin"/>
+    </type>
 </config>

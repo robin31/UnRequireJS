@@ -12,12 +12,17 @@ requirejs-config files if the parent modules are not enabled/configured. Example
 Keep in mind: the official way of making sure that requirejs-config files are not loaded are by properly disabling
 the module in the Magento way. This is by disabling the module in `app/etc/config.php`.
 
-### Talk number to me
+### Talk numbers to me
 For all tests Magento 2.3.1 Luma with sample data has been used as this was the latest version at the creation of this module.
 
 **Homepage**  
-default: 179 javascript file loads.  
-Optimizer: 163 javascript file loads.
+default: 179 javascript file loads and 17 xhr loads.  
+Optimizer: 163 javascript file loads and 16 xhr loads.
+
+**Checkout**
+Default: 284 javascript file loads and 59 xhr loads.
+Optimizer: 266 javascript file loads and 42 xhr loads.
+
 
 Proper JS bundling with either Magento or the RequireJS optimizer will reduce the total number of file loads
 but it would still contain these files and run their init functions etc.
@@ -52,8 +57,8 @@ _Not saving any file loads, just cleaning up_
 
 
 ### Modules todo
-- magento captcha (this can be disabled i believe?)
 - magento bundled product
 - shipping validators
+- temando shipping
 
 

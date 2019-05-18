@@ -8,6 +8,7 @@
                 <item name="Amazon_Payment_unloader" xsi:type="object">Robin31\UnRequireJS\Model\Amazon\PaymentUnloader</item>
                 <item name="Amazon_Login_unloader" xsi:type="object">Robin31\UnRequireJS\Model\Amazon\LoginUnloader</item>
                 <item name="Vertex_Tax_unloader" xsi:type="object">Robin31\UnRequireJS\Model\Vertex\TaxUnloader</item>
+                <item name="Klarna_Kp_unloader" xsi:type="object">Robin31\UnRequireJS\Model\Klarna\KpUnloader</item>
             </argument>
         </arguments>
     </type>
