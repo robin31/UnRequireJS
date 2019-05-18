@@ -1,4 +1,5 @@
 ## UnRequireJS - Magento 2 module
+Unloading Magento 2 requirejs-config files that are not in use.
 
 ### Overview
 
@@ -20,3 +21,20 @@ static content MUST be regenerated because the static content will not hold the 
 
 ### How to use
 > TODO
+
+### Module list
+##### MSP_ReCaptcha
+Config setting of `msp_securitysuite_recaptcha/frontend/enabled` is checked. 
+##### Amazon_Payment
+Config settings of `payment/amazon_payment/active` and `payment/amazon_payment/lwa_enabled` are checked.
+If both are disabled the requirejs-config will be unloaded.
+##### Amazon_Login
+Config settings of `payment/amazon_payment/amazon_login_in_popup` and `payment/amazon_payment/lwa_enabled` are checked.
+If both are disabled the requirejs-config will be unloaded.
+
+### Modules todo
+- magento captcha (this can be disabled i believe?)
+- magento bundled product
+- shipping validators
+
+
