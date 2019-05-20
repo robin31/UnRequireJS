@@ -64,5 +64,17 @@ Config setting of `payment/klarna_kp/active` is checked. requirejs-config is unl
 - magento bundled product
 - shipping validators
 - temando shipping
-
+- magento module-product_video
+- magento_payment
+- magento_msrp
+- magento_paypal
+- magento_downloadable
+- Magento_ConfigurableProduct
+- Magento_Authorizenet
+- Magento_GiftMessage
+- Magento_AuthorizenetAcceptjs
+- Magento_Multishipping
+- Magento_Braintree
+- Magento_ProductVideo
+- Magento_Tinymce3
 
