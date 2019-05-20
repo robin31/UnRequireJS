@@ -47,7 +47,7 @@ If both are disabled the requirejs-config will be unloaded.
 _Not saving any file loads, just saving some kb's in requirejs-config file_
 ##### Amazon_Login
 Config settings of `payment/amazon_payment/amazon_login_in_popup` and `payment/amazon_payment/lwa_enabled` are checked.
-If both are disabled the requirejs-config will be unloaded.
+If both are disabled the requirejs-config will be unloaded.  
 _Saving 10 js file loads_
 #### Vertex_Tax
 Config setting of `tax/vertex_settings/enable_vertex` is checked.
@@ -56,7 +56,7 @@ will not load any extra javascript. Both the requirejs-config and the x-magento-
 _Not saving any file loads, just cleaning up_
 #### Klarna_Kp
 Config setting of `payment/klarna_kp/active` is checked. requirejs-config is unloaded and klarna
- checkout config is removed. This checkout config is depending on the requirejs-config.
+ checkout config is removed. This checkout config is depending on the requirejs-config.  
  _Saving 2 js file loads at checkout_
 
 
