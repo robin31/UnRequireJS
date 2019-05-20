@@ -20,7 +20,7 @@ default: 179 javascript file loads and 17 xhr loads.
 Optimizer: 163 javascript file loads and 16 xhr loads.
 
 **Checkout**
-Default: 284 javascript file loads and 59 xhr loads.
+Default: 284 javascript file loads and 59 xhr loads.  
 Optimizer: 266 javascript file loads and 42 xhr loads.
 
 
